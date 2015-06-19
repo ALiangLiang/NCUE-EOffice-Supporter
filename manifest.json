@@ -1,0 +1,29 @@
+{
+   "name": "NCUE EOffice Supporter",
+   "description": "",
+   "content_scripts": [ {
+	  "all_frames": true,
+			"css": [ "bootstrap.css", "context.standalone.css", "Elessar-master/elessar.css", "elessar.css" ],
+      "js": [ "jquery-2.1.0.min.js", "Elessar-master/dist/elessar.min.js", "context.js", "manageKEYIn.js" ],
+      "matches": [ "*://activity.ncue.edu.tw/~eoffice/area/listarea_del.php", "*://activity.ncue.edu.tw/~eoffice/area/listarea_del.php?*" ],
+	  "run_at": "document_end"
+   }, {
+	  "all_frames": true,
+      "js": [ "editOrdering.js" ],
+      "matches": [ "*://activity.ncue.edu.tw/~eoffice/area/edit_m.php", "*://activity.ncue.edu.tw/~eoffice/area/edit_m.php?*" ],
+	  "run_at": "document_end"
+   }, {
+	  "all_frames": true,
+      "js": [ "addNewOrdering.js" ],
+      "matches": [ "*://activity.ncue.edu.tw/~eoffice/area/reserve_m.php", "*://activity.ncue.edu.tw/~eoffice/area/reserve_m.php?*" ],
+	  "run_at": "document_end"
+   }],
+   "icons": {
+      "128": "icon/icon128.png",
+      "16": "icon/icon16.png",
+      "48": "icon/icon48.png"
+   },
+   "manifest_version": 2,
+   "content_security_policy": "script-src 'self' https://www.google.com https://checkout.google.com; object-src 'self'",
+   "version": "1.0.0"
+}

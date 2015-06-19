@@ -1,0 +1,13 @@
+.elessar-handle {
+  width:30px;
+}
+.elessar-rangebar {
+  margin:0;
+  height:15px;
+}
+.elessar-barlabel{
+	line-height : 15px;
+}
+tr {
+  border-color:red;
+}
